@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  searchUrl: 'http://ec2-3-144-224-182.us-east-2.compute.amazonaws.com/api/admin/search'
+  // searchUrl: 'http://localhost:14082/api/Admin/search'
 };
 
 /*
