@@ -50,7 +50,7 @@
                     <select 
                         class="search-input"
                         formControlName="searchvalue">
-                        <option *ngFor="let item of skills" >{{item.name}}</option>
+                        <option *ngFor="let item of skills" >{{item?.name}}</option>
                     </select>
                 </div>
                 <button type="submit" [disabled]="!searchForm.valid">Search</button>
