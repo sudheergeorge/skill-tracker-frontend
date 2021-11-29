@@ -58,10 +58,13 @@
         </form>
     </div>
     <div class="search-result">
-        <div class="search-result-item" 
+        <div class="search-result-item"
             *ngFor="let profile of profiles">
             <app-profile-detail 
                 [profile]="profile" ></app-profile-detail>
+        </div>
+        <div *ngIf="searchPerformed && profiles.length == 0" >
+            No matching records found
         </div>
     </div>
 </div>

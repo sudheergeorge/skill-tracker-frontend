@@ -10,6 +10,7 @@ import { SearchService } from '../services/search.service';
 })
 export class SearchProfileComponent implements OnInit {
 
+  searchPerformed = false;
   searchForm: FormGroup;
   profiles: Profile[] = [];
   skills = [
@@ -20,9 +21,13 @@ export class SearchProfileComponent implements OnInit {
     {    id: 4,    name: '.NET'  },
     {    id: 5,    name: 'Vue'  },
     {    id: 6,    name: 'MongoDB'  },
-    {    id: 7,    name: 'Communication'  },
-    {    id: 8,    name: 'Domain Skills'  },
-    {    id: 5,    name: 'Leadership'  },
+    {    id: 7,    name: 'Node'  },
+    {    id: 8,    name: 'Javascript'  },
+    {    id: 51,    name: 'Communication'  },
+    {    id: 52,    name: 'Domain Skills'  },
+    {    id: 53,    name: 'Leadership'  },,
+    {    id: 54,    name: 'Critical Thinking'  },
+    {    id: 55,    name: 'Problem Solving'  },
 ];
 
   constructor(
@@ -47,6 +52,7 @@ export class SearchProfileComponent implements OnInit {
     this._searchService.search(payload).subscribe(
       res => {
         this.profiles = res;
+        this.searchPerformed = true;
       },
       err => {
         
